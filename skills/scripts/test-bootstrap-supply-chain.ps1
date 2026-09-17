@@ -152,6 +152,43 @@ printf "pnpm|%s\n" "$*" >> "$BOOTSTRAP_PS_LOG"
     }
 
     . (Join-Path $PSScriptRoot 'bootstrap-reverse.ps1') -Capability '__test_missing__' -SkipRefresh | Out-Null
+
+    # PEP 668/uv-managed Python must install CLI capabilities through pipx,
+    # while the probe itself remains read-only. These command stubs exercise
+    # the real dispatch function without mutating the host interpreter.
+    $pythonStub = Join-Path $bin ($(if ($isWindowsHost) { 'python.cmd' } else { 'python' }))
+    $pipxStub = Join-Path $bin ($(if ($isWindowsHost) { 'pipx.cmd' } else { 'pipx' }))
+    if ($isWindowsHost) {
+        Set-Content -LiteralPath $pythonStub -Value @(
+            '@echo off'
+            'if "%1"=="-c" (echo True) else (echo python^|%*)'
+        )
+        Set-Content -LiteralPath $pipxStub -Value @(
+            '@echo off'
+            'echo pipx^|%*>>"%BOOTSTRAP_PS_LOG%"'
+        )
+    }
+    else {
+        Write-UnixExecutable -Path $pythonStub -Content @'
+#!/bin/sh
+if [ "$1" = -c ]; then echo True; else printf "python|%s\n" "$*"; fi
+'@
+        Write-UnixExecutable -Path $pipxStub -Content @'
+#!/bin/sh
+printf "pipx|%s\n" "$*" >> "$BOOTSTRAP_PS_LOG"
+'@
+    }
+    $beforePipx = if (Test-Path -LiteralPath $env:BOOTSTRAP_PS_LOG) {
+        Get-Content -LiteralPath $env:BOOTSTRAP_PS_LOG -Raw
+    }
+    else { '' }
+    Ensure-PipPackageInstall -Definition ([pscustomobject]@{
+        pipPackage = 'frida-tools==14.10.4'
+    })
+    $pipxCalls = (Get-Content -LiteralPath $env:BOOTSTRAP_PS_LOG -Raw).Substring($beforePipx.Length)
+    Assert-True ($pipxCalls -match 'pipx\|install --force frida-tools==14\.10\.4') 'PEP 668 package did not route through pipx'
+    Assert-True ($pipxCalls -notmatch 'python.*pip install.*frida-tools') 'PEP 668 package attempted direct pip mutation'
+
     $script:gitCloneDefinition = [pscustomobject]@{
         name = 'test-git-clone'
         bootstrapKind = 'git-clone'

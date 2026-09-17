@@ -160,6 +160,52 @@ function Ensure-PythonRuntime {
     }
 }
 
+function Test-PythonExternallyManaged {
+    param([Parameter(Mandatory = $true)][string]$Python)
+
+    # PEP 668 publishes the authoritative marker in the interpreter's stdlib.
+    # Probe it without attempting an install, so a failed package mutation can
+    # never be mistaken for the capability check.
+    $probe = & $Python -c "import sysconfig; from pathlib import Path; print(Path(sysconfig.get_path('stdlib'), 'EXTERNALLY-MANAGED').is_file())" 2>$null
+    if ($LASTEXITCODE -ne 0) {
+        return $false
+    }
+    return (@($probe) -contains 'True')
+}
+
+function Ensure-PipxRuntime {
+    param(
+        [Parameter(Mandatory = $true)][string]$Python,
+        [switch]$PythonExternallyManaged
+    )
+
+    $pipx = Get-FirstCommandPath -Names @('pipx', 'pipx.exe') -PreferApplication
+    if (-not [string]::IsNullOrWhiteSpace($pipx)) {
+        return $pipx
+    }
+
+    $dependency = Get-BootstrapDependency -Name 'pipx'
+    $uv = Get-FirstCommandPath -Names @('uv', 'uv.exe') -PreferApplication
+    if (-not [string]::IsNullOrWhiteSpace($uv)) {
+        & $uv tool install --force ([string]$dependency.package)
+        if ($LASTEXITCODE -eq 0) {
+            $pipx = Get-FirstCommandPath -Names @('pipx', 'pipx.exe') -PreferApplication
+        }
+    }
+
+    if ([string]::IsNullOrWhiteSpace($pipx) -and -not $PythonExternallyManaged) {
+        & $Python -m pip install --user --upgrade ([string]$dependency.package)
+        if ($LASTEXITCODE -ne 0) {
+            throw "pipx is unavailable and its pinned bootstrap package could not be installed; install pipx or uv, then retry"
+        }
+        $pipx = Get-FirstCommandPath -Names @('pipx', 'pipx.exe') -PreferApplication
+    }
+    if ([string]::IsNullOrWhiteSpace($pipx)) {
+        throw "pipx is unavailable for this Python environment; install the pinned pipx bootstrap dependency with uv tool install or refresh PATH, then retry"
+    }
+    return $pipx
+}
+
 function Ensure-JavaRuntime {
     if (-not (Get-FirstCommandPath -Names @('java'))) {
         Ensure-WingetPackage -Id 'Microsoft.OpenJDK.21' -Label 'OpenJDK 21'
@@ -531,9 +577,20 @@ function Ensure-PipPackageInstall {
     } else {
         $Definition.pipPackage
     }
-    & $python -m pip install --upgrade $installTarget
+    if (Test-PythonExternallyManaged -Python $python) {
+        $pipx = Ensure-PipxRuntime -Python $python -PythonExternallyManaged
+        & $pipx install --force $installTarget
+        if ($LASTEXITCODE -ne 0) {
+            throw "pipx install failed for $installTarget"
+        }
+        return
+    }
+
+    # Keep ordinary interpreters isolated from system site-packages too; the
+    # user install is the safe fallback when PEP 668 is not present.
+    & $python -m pip install --user --upgrade $installTarget
     if ($LASTEXITCODE -ne 0) {
-        throw "pip install failed for $installTarget"
+        throw "pip install --user failed for $installTarget"
     }
 }
 
