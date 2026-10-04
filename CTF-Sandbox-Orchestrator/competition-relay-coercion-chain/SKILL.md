@@ -1,6 +1,6 @@
 ---
 name: competition-relay-coercion-chain
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for forced-auth coercion, relay chains, target selection, NTLM or related acceptance paths, and coercion-to-privilege transitions. Use when the user asks to trace a coercion primitive, follow a relay path, analyze forced authentication, determine which service accepts relayed auth, or connect a coercion step to resulting privilege, enrollment, or code execution. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to trace a coercion primitive, follow a relay path, analyze forced authentication, determine which service accepts relayed auth, or connect a coercion step to resulting privilege, enrollment, or code execution. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for forced-auth coercion, relay chains, target selection, NTLM or related acceptance paths, and coercion-to-privilege transitions. Covers the downstream AD CS certificate-enrollment/PKINIT and Kerberos delegation/S4U acceptance branches when relay acceptance leads into certificate or ticket transformation. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Relay Coercion Chain
@@ -37,7 +37,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 - Compress the result to the smallest sequence: coercion trigger -> relayed auth -> accepted service -> resulting privilege or artifact.
 - State clearly whether the decisive weakness lives in the coercion source, the relay target, signing settings, or the accepted downstream service.
-- If the path ultimately becomes a certificate-enrollment issue or a pure Kerberos delegation edge, hand off to the tighter specialized skill.
+- If the path ultimately becomes a certificate-enrollment issue, route to `$competition-ad-certificate-abuse`; for a pure Kerberos delegation edge, route to `$competition-kerberos-delegation`.
 
 ## Read This Reference
 

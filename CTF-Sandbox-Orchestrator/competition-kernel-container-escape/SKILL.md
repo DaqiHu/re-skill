@@ -1,6 +1,6 @@
 ---
 name: competition-kernel-container-escape
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for kernel attack surface, namespace and cgroup boundaries, container isolation assumptions, syscall paths, and escape primitive verification. Use when the user asks to analyze container-to-host escape paths, kernel exploit prerequisites, namespace crossover, capability misuse, or prove whether an exploit primitive crosses the sandbox boundary. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to analyze container-to-host escape paths, kernel exploit prerequisites, namespace crossover, capability misuse, or prove whether an exploit primitive crosses the sandbox boundary. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for kernel attack surface, namespace and cgroup boundaries, container isolation assumptions, syscall paths, and escape primitive verification. Distinguishes kernel-boundary crossing from the adjacent Linux credential, SSH, token, and socket-trust replay path after initial foothold. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Kernel Container Escape
@@ -37,7 +37,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 - Compress to: prerequisite state -> primitive trigger -> boundary crossing evidence -> resulting host-level capability.
 - State whether root cause is kernel vulnerability, runtime misconfiguration, capability overgrant, or namespace leak.
-- If path relies mostly on credential replay after initial foothold, hand off to Linux credential pivot skill.
+- If path relies mostly on credential replay after initial foothold, route to `$competition-linux-credential-pivot`.
 
 ## Read This Reference
 

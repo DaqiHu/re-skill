@@ -1,6 +1,6 @@
 ---
 name: competition-crypto-mobile
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for crypto, encoding, steganography, APK, IPA, and mobile trust-boundary challenges. Use when the user asks to decode a blob, recover a transform chain or key, inspect hidden media payloads, hook an APK or IPA signer, inspect app storage, or replay mobile request-signing logic. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to decode a blob, recover a transform chain or key, inspect hidden media payloads, hook an APK or IPA signer, inspect app storage, or replay mobile request-signing logic. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for crypto, encoding, steganography, APK, IPA, and mobile trust-boundary challenges. Covers ordered container/compression/encoding/XOR/crypto/integrity transforms, media metadata/channels/LSB/trailers, Android APK Frida/signer/JNI/WebView/pinning hooks, and iOS IPA Objective-C/Swift/Keychain/deeplink/pinning analysis. Reproduce the actual plaintext, hidden payload, signed request, or accepted trust effect using the narrowest boundary. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Crypto Mobile

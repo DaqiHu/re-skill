@@ -1,6 +1,6 @@
 ---
 name: competition-pcap-protocol
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for packet capture analysis, session reconstruction, application-protocol decoding, stream reassembly, beacon timing, and packet-to-process correlation. Use when the user asks to analyze a PCAP, rebuild TCP or UDP sessions, decode HTTP, WebSocket, DNS, custom C2, or binary protocols, extract transferred artifacts, or tie packet sequences to host or malware behavior. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to analyze a PCAP, rebuild TCP or UDP sessions, decode HTTP, WebSocket, DNS, custom C2, or binary protocols, extract transferred artifacts, or tie packet sequences to host or malware behavior. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for packet capture analysis, session reconstruction, application-protocol decoding, stream reassembly, beacon timing, and packet-to-process correlation. Covers capture gaps and reassembly limits, WebSocket/SSE handshake and frame-driven runtime behavior, and stateful custom-protocol replay with framing, sequence, checksum, and acceptance proof, alongside TCP/UDP session reconstruction and packet-to-process correlation. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition PCAP Protocol

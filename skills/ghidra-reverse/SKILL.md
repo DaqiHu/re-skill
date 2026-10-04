@@ -1,6 +1,6 @@
 ---
 name: ghidra-reverse
-description: Use for free/open reverse engineering with Ghidra (headless or GUI), including decompile, cross-refs, and optional Ghidra MCP workflows when IDA is unavailable.
+description: "Use when authorized reverse engineering calls for free/open-source Ghidra, in GUI, headless, batch, Java/Python, or PyGhidra workflows; inspect formats, imports/exports, functions, decompilation, xrefs, data flow, types, and comments, and use ghidriff for structured version comparisons; preserve reproducible project/script evidence, use MCP only when available in the tool index, and route IDA-specific or dynamic exploitation work to its specialist."
 ---
 
 # Ghidra Reverse Engineering

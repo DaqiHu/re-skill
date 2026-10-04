@@ -1,6 +1,6 @@
 ---
 name: competition-runtime-routing
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for reverse proxies, Host headers, forwarded headers, vhost routing, websocket upgrades, path-prefix rewriting, base-URL derivation, and multi-node route resolution. Use when the user asks which host or container serves a route, why a public-looking domain still belongs to the sandbox, how headers or proxies change behavior, or how a route resolves across proxy, container, and worker boundaries. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks which host or container serves a route, why a public-looking domain still belongs to the sandbox, how headers or proxies change behavior, or how a route resolves across proxy, container, and worker boundaries. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for reverse proxies, Host headers, forwarded headers, vhost routing, websocket upgrades, path-prefix rewriting, base-URL derivation, and multi-node route resolution. Covers the adjacent proxy/backend normalization and request-smuggling branch, including path decoding, ambiguous headers, and Content-Length/Transfer-Encoding framing differences across hops. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Runtime Routing

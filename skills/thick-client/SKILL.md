@@ -1,6 +1,6 @@
 ---
 name: thick-client
-description: Use for authorized security testing of desktop thick clients including local storage, update channels, IPC, traffic, and client-side trust boundaries.
+description: "Use when testing an authorized Windows, macOS, or Linux desktop client, including Electron, Qt, or .NET apps; assess local storage and credentials, process/service behavior, IPC, DLL/library loading, update/signing paths, custom TLS/proxy behavior, APIs, and client-side authorization; bind testing to the named build/account/environment, preserve reproducible evidence, and route extension or native implementation work to the relevant specialist."
 ---
 
 # Thick Client Security Testing

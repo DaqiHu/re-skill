@@ -1,6 +1,6 @@
 ---
 name: api-security
-description: Use for authorized security assessment of REST, GraphQL, WebSocket, or SOAP APIs, including discovery, authentication, authorization, rate-limit, and CI/CD testing.
+description: "Use when assessing authorized REST, GraphQL, WebSocket, or SOAP APIs; cover endpoint discovery, authentication and authorization (JWT/OAuth, BOLA/IDOR/BFLA), input and business-logic flaws, rate limits, DoS, and data exposure; keep traffic within scope, preserve reproducible evidence, verify fixes through CI/CD regressions, and route browser behavior or custom protocol recovery to the relevant specialist."
 ---
 # API 安全测试
 

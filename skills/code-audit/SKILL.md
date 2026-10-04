@@ -1,6 +1,6 @@
 ---
 name: code-audit
-description: Use for authorized source-code security review and SAST workflows including Semgrep, CodeQL patterns, dangerous API hunting, and fix verification.
+description: "Use when reviewing authorized source code, a commit, or a pull request for security defects; establish repository and threat-model scope, combine Semgrep/CodeQL or equivalent SAST with manual reachability review, and assess injection, authorization, secrets, and cryptographic misuse while separating confirmed paths from false positives; record evidence, recommend fixes, verify the changed path, and route dependency or pipeline issues to supply-chain-security."
 ---
 
 # Source Code Security Audit

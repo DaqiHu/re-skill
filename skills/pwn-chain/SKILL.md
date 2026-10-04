@@ -1,11 +1,6 @@
 ---
 name: pwn-chain
-description: |
-  从逆向走到可用利用 (Working Exploit) 的全链路工程化方法。
-  适用场景：拿到了二进制 + 漏洞点 + 目标环境，需要写出一个能稳定打通的 exploit（不是只能本地复现一下、远程一打就崩的脚本）。
-  覆盖三大方向：栈溢出 / 堆利用 / 内核 pwn。强调"CTF 本地通 → 真实远程稳定打通"的工程差距：libc 版本错配、堆喷射时序、SMEP/SMAP/KASLR、栈对齐、远程缓冲。
-  核心工具链：pwntools + GEF/pwndbg + ROPgadget/Ropper + one_gadget + libc-database + qemu-system 内核调试。
-  触发关键词：pwn、栈溢出、堆溢出、ROP、ret2libc、ret2csu、one_gadget、libc-database、堆利用、tcache、fastbin、unsorted bin、kernel pwn、kROP、SMEP、SMAP、KASLR、modprobe_path、pwntools、GEF、pwndbg。
+description: "Use when a known memory-corruption bug must become a reliable authorized CTF/lab or in-scope exploit; cover stack/ROP/ret2libc, heap/tcache/fastbin, and kernel paths with pwntools, GDB/GEF/pwndbg, libc/ROP tooling, and QEMU, accounting for version, timing, remote I/O, ASLR, SMEP/SMAP, KASLR, and alignment; measure repeatable reliability within the declared target scope, and route bug discovery or multi-stage planning to reverse-engineering or attack-chain."
 ---
 
 ## ACTION REQUIRED（读完后立刻执行）

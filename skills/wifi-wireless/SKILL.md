@@ -1,6 +1,6 @@
 ---
 name: wifi-wireless
-description: Use for authorized wireless security assessment including Wi-Fi capture, WPA handshake analysis, rogue AP detection research, and lab-only deauth testing.
+description: "Use when performing authorized Wi-Fi security assessment, including WPA handshake/PMKID review, enterprise authentication, captive portals, and rogue-AP detection; identify the approved SSID/BSSID, site, and time window, prefer passive capture and offline analysis, and prohibit non-target capture, deauthentication, or disruption without explicit scope; route non-Wi-Fi RF work to radio-sdr."
 ---
 
 # Wi-Fi / Wireless Security

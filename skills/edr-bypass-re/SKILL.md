@@ -1,12 +1,6 @@
 ---
 name: edr-bypass-re
-description: |
-  逆向防御方实现 → 红队针对性绕过。把 EDR / Defender / AV 的 hook 表、ETW provider、AMSI 实现先逆向出来，
-  再写针对性的 unhook / 间接 syscall / ETW patch / call stack spoof。对照 MITRE ATT&CK T1562 防御规避。
-  触发关键词：EDR 绕过、AV bypass、免杀、unhook、direct syscall、indirect syscall、Hell's Gate、Halo's Gate、
-  Tartarus Gate、ETW patch、AMSI patch、call stack spoofing、hardware breakpoint Blindside、MITRE T1562、
-  ntdll unhook、kernel callback、CrowdStrike 绕过、Defender 绕过、Sentinel One 绕过、Elastic Defend、
-  Sysmon 规避、PPID spoof、Sleep mask、Process Hollowing、Reflective DLL。
+description: "Use when conducting an authorized red/purple-team, CTF, or owned-product study of EDR/AV/Defender implementations and ATT&CK T1562; covers hooks/unhooking, direct/indirect syscalls, ETW/AMSI, callbacks and telemetry, call-stack/PPID spoofing, hardware breakpoints, sleep masks, process hollowing and reflective loading, isolated behavior/detection validation, evidence and redaction, written scope/disclosure boundaries, and attack-chain routing."
 ---
 
 ## ACTION REQUIRED（读完后立刻执行）

@@ -1,6 +1,6 @@
 ---
 name: competition-websocket-runtime
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for WebSocket and SSE handshakes, auth material, subscription state, realtime message schemas, reconnect behavior, and frame-driven runtime effects. Use when the user asks to inspect a WebSocket or SSE handshake, decode frames, trace subscriptions, follow reconnect logic, inspect auth material sent during realtime setup, or explain how live frames change rendered or persisted state. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to inspect a WebSocket or SSE handshake, decode frames, trace subscriptions, follow reconnect logic, inspect auth material sent during realtime setup, or explain how live frames change rendered or persisted state. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for WebSocket and SSE handshakes, auth material, subscription state, realtime message schemas, reconnect behavior, and frame-driven runtime effects. Also distinguishes realtime WebSocket/SSE handshake and frame-driven app state from generic PCAP stream or protocol reconstruction, which follows the broader packet-analysis path. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition WebSocket Runtime
@@ -37,7 +37,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 - Compress the result to the smallest sequence: handshake -> auth or subscribe frame -> pushed or accepted frame -> resulting state change.
 - Keep canonical frame order and any replayed minimal order side by side.
-- If the hard part is generic protocol reassembly without runtime UI or app-state linkage, switch back to the tighter protocol skill.
+- If the hard part is generic protocol reassembly without runtime UI or app-state linkage, route to `$competition-pcap-protocol`.
 
 ## Read This Reference
 

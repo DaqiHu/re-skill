@@ -1,6 +1,6 @@
 ---
 name: competition-browser-persistence
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for browser cookies, localStorage, sessionStorage, IndexedDB, Cache Storage, service workers, offline caches, and client-side session persistence. Use when the user asks to inspect browser state, replay cached auth or session behavior, explain why a page behaves differently after load, or trace how stored client state changes requests, rendering, or access. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to inspect browser state, replay cached auth or session behavior, explain why a page behaves differently after load, or trace how stored client state changes requests, rendering, or access. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for browser cookies, localStorage, sessionStorage, IndexedDB, Cache Storage, service workers, offline caches, and client-side session persistence. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Browser Persistence

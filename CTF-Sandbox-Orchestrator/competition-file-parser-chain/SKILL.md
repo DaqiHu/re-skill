@@ -1,6 +1,6 @@
 ---
 name: competition-file-parser-chain
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for file uploads, imports, previews, archive extraction, format conversion, parser invocation, and deserialization chains. Use when the user asks to inspect an upload or import path, trace archive extraction, preview or converter behavior, explain how a file reaches a parser or deserializer, or connect one uploaded artifact to the decisive backend effect. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to inspect an upload or import path, trace archive extraction, preview or converter behavior, explain how a file reaches a parser or deserializer, or connect one uploaded artifact to the decisive backend effect. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for file uploads, imports, previews, archive extraction, format conversion, parser invocation, and deserialization chains. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition File Parser Chain
@@ -37,7 +37,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 - Compress the result to the smallest sequence: upload -> derived artifact -> parser boundary -> resulting effect.
 - State clearly whether the decisive weakness lives in archive handling, MIME inference, file conversion, path resolution, or deserialization.
-- If the chain becomes mostly a generic async worker problem after enqueue, hand off to the tighter queue or worker skill.
+- If the chain becomes mostly a generic async worker problem after enqueue, route to `$competition-queue-worker-drift`.
 
 ## Read This Reference
 

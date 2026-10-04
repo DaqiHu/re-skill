@@ -1,6 +1,6 @@
 ---
 name: competition-ssrf-metadata-pivot
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for SSRF reachability, internal route probing, metadata-service access, credential pivoting, and token-to-accepted-privilege chains. Use when the user asks to trace SSRF sources, internal hosts, metadata endpoints, link-local tokens, service-account credentials, or explain how a server-side fetch edge turns into accepted access. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to trace SSRF sources, internal hosts, metadata endpoints, link-local tokens, service-account credentials, or explain how a server-side fetch edge turns into accepted access. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for SSRF reachability, internal route probing, metadata-service access, credential pivoting, and token-to-accepted-privilege chains. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition SSRF Metadata Pivot
@@ -37,7 +37,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 - Compress to: SSRF source -> internal or metadata target -> credential or sensitive response -> accepted replay or API access.
 - State whether the decisive edge is parser bypass, allowlist bypass, redirect abuse, header confusion, or metadata trust.
-- If the task becomes mostly cloud identity policy analysis, hand off to the tighter cloud metadata skill.
+- If the task becomes mostly cloud identity policy analysis, route to `$competition-cloud-metadata-path`.
 
 ## Read This Reference
 

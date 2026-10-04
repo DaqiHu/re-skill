@@ -1,6 +1,6 @@
 ---
 name: mobile-reverse
-description: Use for authorized Android or iOS application reverse engineering and security testing, including APK or IPA analysis, runtime instrumentation, SSL pinning, and platform protection checks.
+description: "Use when performing authorized Android or iOS application analysis from APK/IPA and Manifest/Info.plist through Java, Kotlin, Objective-C, Swift, and native code; use JADX/apktool/Ghidra and scoped Frida/Objection to assess network behavior, cryptography, keys, SSL pinning, root/jailbreak checks, and anti-debug controls; record device, package/signature, and evidence scope, preserve originals, and route platform-specific binary work to apk-reverse or macos-reverse."
 ---
 # Mobile Reverse Engineering
 

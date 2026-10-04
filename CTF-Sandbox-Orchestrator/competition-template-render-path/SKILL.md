@@ -1,6 +1,6 @@
 ---
 name: competition-template-render-path
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for SSR, template rendering, route loaders, hydration payloads, server-client render boundaries, and template-to-handler enforcement gaps. Use when the user asks to inspect SSR or template routes, trace render context or hydration data, compare template gating with handler enforcement, explain preview or hidden-route rendering, or connect render pipeline behavior to the decisive branch. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to inspect SSR or template routes, trace render context or hydration data, compare template gating with handler enforcement, explain preview or hidden-route rendering, or connect render pipeline behavior to the decisive branch. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for SSR, template rendering, route loaders, hydration payloads, server-client render boundaries, and template-to-handler enforcement gaps. Covers the handoff from SSR/template and hydration analysis to served bundles, source maps, chunk registries, and hidden frontend runtime structure when emitted assets become decisive. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Template Render Path

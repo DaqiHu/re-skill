@@ -1,6 +1,6 @@
 ---
 name: competition-custom-protocol-replay
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for custom binary or text protocol recovery, handshake reconstruction, framing, sequence control, checksums, stateful replay, and accepted-session reproduction. Use when the user asks to decode an unknown protocol, recover custom framing, build a replay harness, satisfy sequence or checksum rules, replay a captured session, or prove the smallest message order that reaches an accepted branch. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to decode an unknown protocol, recover custom framing, build a replay harness, satisfy sequence or checksum rules, replay a captured session, or prove the smallest message order that reaches an accepted branch. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for custom binary or text protocol recovery, handshake reconstruction, framing, sequence control, checksums, stateful replay, and accepted-session reproduction. Distinguishes stateful accepted-session replay from generic PCAP stream reconstruction when packet reassembly, rather than protocol state, is the main blocker. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Custom Protocol Replay
@@ -37,7 +37,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 - Reduce the path to the smallest transcript that reaches the accepted state, parser branch, command effect, or artifact.
 - Preserve both the original captured sequence and the replayed minimal sequence.
-- If the problem is mainly generic PCAP or stream decoding with no stateful replay requirement, switch back to the broader PCAP skill.
+- If the problem is mainly generic PCAP or stream decoding with no stateful replay requirement, route to `$competition-pcap-protocol`.
 
 ## Read This Reference
 

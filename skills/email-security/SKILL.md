@@ -1,6 +1,6 @@
 ---
 name: email-security
-description: Use for authorized email security review including phishing analysis, header authentication (SPF/DKIM/DMARC), BEC patterns, and mailbox token abuse research.
+description: "Use when analyzing an authorized email sample or tenant; inspect headers and SPF/DKIM/DMARC, URLs and attachments, BEC patterns, OAuth consent and mailbox-token abuse, then provide source-backed IOCs and control recommendations; preserve the original message and evidence, avoid unauthorized redelivery or bulk actions, and route actor/context research to threat-intelligence or detection work to threat-hunting."
 ---
 
 # Email Security & Phishing Analysis

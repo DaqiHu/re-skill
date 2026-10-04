@@ -1,6 +1,6 @@
 ---
 name: competition-reverse-pwn
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for reverse engineering, malware, DFIR, firmware, pwnable, and native exploit challenges. Use when the user asks to reverse a binary, unpack a sample, inspect a memory dump or PCAP, recover malware behavior, debug a crash, or build or verify an exploit chain under sandbox assumptions. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to reverse a binary, unpack a sample, inspect a memory dump or PCAP, recover malware behavior, debug a crash, or build or verify an exploit chain under sandbox assumptions. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for reverse engineering, malware, DFIR, firmware, pwnable, and native exploit challenges. Covers passive binary triage, decoded or staged malware configuration/IOCs, firmware partitions/boot/update chains, upload/parser/archive/deserialization boundaries, served frontend bundles/source maps, kernel/container escape prerequisites, PCAP stream and custom-protocol replay, and cross-artifact forensic timelines, alongside native crashes, leaks, and exploit primitives. Preserve pristine and derived artifacts separately and distinguish a primitive from a reproduced effect. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Reverse Pwn

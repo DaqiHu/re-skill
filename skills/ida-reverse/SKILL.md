@@ -1,11 +1,6 @@
 ---
 name: ida-reverse
-description: |
-  IDA Pro 逆向分析辅助技能。当用户提到逆向、反编译、分析二进制/PE/ELF/APK/DLL/SO、破解、找密码、漏洞分析、病毒分析、firmware 固件分析，或需要分析 exe/dll/so/elf/macho/sys 等文件时，务必使用此技能。
-
-  Ensure to use this skill when the user wants to analyze any binary file, regardless of whether they explicitly mention "IDA" or "reverse engineering". This includes requests like "看看这个exe", "分析这个dll", "帮我破解", "找一下密码", "这个软件怎么注册", etc.
-
-  Use the bundled scripts (scripts/start.ps1, scripts/open.ps1) for deterministic server management and file opening — do NOT write ad-hoc PowerShell commands for these operations.
+description: "Use when analyzing an authorized binary with IDA Pro/IDAPython or IDA MCP/HTTP, including binary-analysis requests that do not name IDA, for PE, ELF, Mach-O, APK, DLL, SO, SYS, or firmware; survey imports/exports and validate their evidence before decompilation, then use disassembly, xrefs, data flow, types, comments, and renaming, documenting any requested patch; use the bundled start/open scripts and documented GUI/headless/session recovery paths, preserve the user's session and original, respect licensing, and route specialized diffs or runtime work to its specialist."
 ---
 
 # IDA Pro 逆向分析技能

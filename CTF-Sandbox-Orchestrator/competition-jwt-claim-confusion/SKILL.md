@@ -1,6 +1,6 @@
 ---
 name: competition-jwt-claim-confusion
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for JWT, JWS, and JWE validation paths, header parsing, key selection, claim acceptance, audience and issuer checks, role derivation, and token-to-identity confusion bugs. Use when the user asks to inspect JWT headers or claims, key lookup, `kid` handling, `alg` confusion, audience or issuer validation, role claims, or explain how a token becomes accepted identity or privilege. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to inspect JWT headers or claims, key lookup, `kid` handling, `alg` confusion, audience or issuer validation, role claims, or explain how a token becomes accepted identity or privilege. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for JWT, JWS, and JWE validation paths, header parsing, key selection, claim acceptance, audience and issuer checks, role derivation, and token-to-identity confusion bugs. Covers the handoff to full OAuth/OIDC redirect, callback, PKCE, token-exchange, and refresh flows when the issue precedes JWT claim validation. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition JWT Claim Confusion
@@ -37,7 +37,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 - Compress the result to the smallest sequence: token supplied -> parser or key path taken -> claim accepted -> resulting capability.
 - Keep one canonical accepted token path and one mutated token path if confusion or bypass depends on a delta.
-- If the task broadens into a larger OAuth redirect chain, hand back to the tighter OAuth skill.
+- If the task broadens into a larger OAuth redirect chain, route to `$competition-oauth-oidc-chain`.
 
 ## Read This Reference
 

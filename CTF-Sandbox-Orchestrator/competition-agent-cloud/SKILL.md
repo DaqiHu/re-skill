@@ -1,6 +1,6 @@
 ---
 name: competition-agent-cloud
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for AI-agent, prompt-injection, MCP or toolchain, cloud, container, CI/CD, and supply-chain challenges. Use when the user asks to analyze prompt-to-tool flows, retrieval poisoning, mounted secrets, deployment drift, runtime-vs-manifest mismatches, registry provenance, or CI-produced artifacts under sandbox assumptions. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to analyze prompt-to-tool flows, retrieval poisoning, mounted secrets, deployment drift, runtime-vs-manifest mismatches, registry provenance, or CI-produced artifacts under sandbox assumptions. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for AI-agent, prompt-injection, MCP or toolchain, cloud, container, CI/CD, and supply-chain challenges. Covers prompt injection, retrieval and memory poisoning, MCP/tool-boundary drift, cloud metadata and workload identity, CI/CD and supply-chain provenance, queue/retry workers, SSRF and HTTP parser/request-smuggling paths, Kubernetes RBAC/admission/controller mutations and secrets, live container mounts/sidecars, and kernel/container escape. Distinguish claimed capabilities and manifest intent from observed tool/runtime effects. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Agent Cloud

@@ -1,6 +1,6 @@
 ---
 name: apk-reverse
-description: 在 CLI 环境下做 Android APK 逆向时使用。适用于 APK 解包、Java 反编译、smali 修改、重打包、Frida 动态 Hook，以及按需切换到 so/native 分析。优先使用本机已安装的 jadx、apktool、frida、adb、ida-reverse、radare2。
+description: "Use when reverse engineering an authorized Android APK; inspect package identity, manifest, components, permissions, resources, Java/Kotlin with JADX, and smali with apktool; use Frida/ADB for scoped runtime hooks, and rebuild or sign only when requested, verifying package/signature and preserving the original; route native .so analysis to IDA, Ghidra, or radare2 and respect device scope and tool licenses."
 ---
 
 ## ACTION REQUIRED（读完后立刻执行）

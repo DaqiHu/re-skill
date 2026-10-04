@@ -1,6 +1,6 @@
 ---
 name: llm-security
-description: Use for authorized security assessment of LLM applications and AI agents, including prompt injection, tool abuse, RAG exposure, memory poisoning, and model supply-chain risks.
+description: "Use when assessing authorized LLM applications or agents; test prompt injection and system-prompt exposure, tool permissions and human approval, RAG/data exposure and memory poisoning, output injection, and model/skill/MCP supply-chain risks; use scoped probes and canaries, review external skills and connectors before trust, preserve reproducible evidence, and route source-code or dependency findings to code-audit or supply-chain-security."
 ---
 # LLM / AI 安全测试
 

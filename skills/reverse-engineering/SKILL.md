@@ -1,6 +1,6 @@
 ---
 name: reverse-engineering
-description: Provides reverse engineering techniques. Use when the main job is to understand how a compiled, obfuscated, packed, or virtualized target works before exploiting or solving it, including binaries, APKs, WASM, firmware, custom VMs, bytecode, malware-like loaders, and anti-debug or anti-analysis logic. Do not use it when the vulnerability is already understood and the remaining task is exploitation; use pwn instead. Do not use it for pure web workflows, log or disk forensics, or standalone crypto problems unless reversing the implementation is the real blocker.
+description: "Use when the main authorized task is understanding a compiled, packed, obfuscated, or virtualized target before exploitation; cover native binaries, APKs, firmware, macOS/kernel code, .NET, Go/Rust, WASM, bytecode, custom DSL/VMs, loaders, and anti-debug/anti-analysis using static, dynamic, or symbolic methods with stage evidence; route APK, language/runtime, DSL, IDA, malware, JS, forensics, or known-bug exploitation to the specific child/specialist."
 license: MIT
 compatibility: Requires a filesystem-based code agent or CLI with shell access, Python 3, and internet access for tool installation.
 allowed-tools: Bash Read Write Edit Glob Grep Task WebFetch WebSearch

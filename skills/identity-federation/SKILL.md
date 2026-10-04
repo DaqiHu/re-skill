@@ -1,6 +1,6 @@
 ---
 name: identity-federation
-description: Use for authorized assessment of federated identity systems including SAML, OIDC, OAuth2 flows, SSO misconfiguration, and token confusion issues.
+description: "Use when assessing an authorized SAML, OIDC, OAuth2, or SSO integration; map the IdP/SP flow and verify redirect URI, state, nonce, PKCE, issuer, signature, token audience, session, and logout behavior, distinguishing protocol evidence from configuration assumptions; keep IdP, application, and test-account scope explicit, avoid lockout or cross-tenant changes, and route JWT or cloud-role issues to the relevant specialist."
 ---
 
 # Identity Federation (SAML / OIDC / OAuth)

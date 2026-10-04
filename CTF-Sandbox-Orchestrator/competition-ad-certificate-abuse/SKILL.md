@@ -1,6 +1,6 @@
 ---
 name: competition-ad-certificate-abuse
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for AD CS, certificate templates, enrollment rights, EKUs, SAN controls, PKINIT, certificate mapping, and cert-based privilege paths. Use when the user asks about ESC-style abuse, certificate templates, enrollment agents, EKUs, SAN or subject controls, smartcard or PKINIT logon, CA policy, or how an issued cert turns into accepted privilege. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks about ESC-style abuse, certificate templates, enrollment agents, EKUs, SAN or subject controls, smartcard or PKINIT logon, CA policy, or how an issued cert turns into accepted privilege. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for AD CS, certificate templates, enrollment rights, EKUs, SAN controls, PKINIT, certificate mapping, and cert-based privilege paths. Covers the handoff from PKINIT or certificate acceptance to Kerberos ticket transformation and delegation when that later ticket edge becomes decisive. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition AD Certificate Abuse
@@ -37,7 +37,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 - Compress the path to the smallest sequence: enrollment right or misconfig -> issued cert -> accepted mapping -> resulting privilege.
 - State clearly whether the weakness lives in template config, CA policy, mapping logic, relay path, or enrollment rights.
-- If the task is really about delegation or ticket transformation after PKINIT, switch back to the tighter Kerberos skill.
+- If the task is really about delegation or ticket transformation after PKINIT, route to `$competition-kerberos-delegation`.
 
 ## Read This Reference
 

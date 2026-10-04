@@ -1,6 +1,6 @@
 ---
 name: competition-firmware-layout
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for firmware images, partition tables, boot chains, update packages, extracted filesystems, embedded configs, and device-facing trust boundaries. Use when the user asks to unpack firmware, map partition layout, inspect bootloader or init chains, recover update keys or credentials, trace config loading, or explain how a device surface reaches the decisive artifact. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to unpack firmware, map partition layout, inspect bootloader or init chains, recover update keys or credentials, trace config loading, or explain how a device surface reaches the decisive artifact. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for firmware images, partition tables, boot chains, update packages, extracted filesystems, embedded configs, and device-facing trust boundaries. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Firmware Layout

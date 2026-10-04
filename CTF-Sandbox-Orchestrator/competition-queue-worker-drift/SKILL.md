@@ -1,6 +1,6 @@
 ---
 name: competition-queue-worker-drift
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for queues, async workers, cron jobs, delayed tasks, retry behavior, worker-only config drift, and payload-to-side-effect chains. Use when the user asks to trace a queue payload, inspect async job execution, explain worker-only behavior, follow retries or dead-letter handling, or connect an enqueued item to a later file, cache, email, or privilege-bearing side effect. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to trace a queue payload, inspect async job execution, explain worker-only behavior, follow retries or dead-letter handling, or connect an enqueued item to a later file, cache, email, or privilege-bearing side effect. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for queues, async workers, cron jobs, delayed tasks, retry behavior, worker-only config drift, and payload-to-side-effect chains. Covers the worker-invoked upload/file parser and deserializer branch when queued processing is dominant, including the distinction between enqueue-time success and parser-side effects. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Queue Worker Drift
@@ -37,7 +37,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 - Compress the result to the smallest sequence: enqueue -> worker runtime -> retry or branch -> resulting effect.
 - State clearly whether the decisive difference lives in payload shape, worker config, retry path, or downstream consumer.
-- If the issue is really about the file parser invoked by the worker, switch back to the tighter file-parser skill.
+- If the issue is really about the file parser invoked by the worker, route to `$competition-file-parser-chain`.
 
 ## Read This Reference
 

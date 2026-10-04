@@ -1,6 +1,6 @@
 ---
 name: digital-forensics
-description: Use for authorized digital forensics including memory dumps, disk timelines, PCAP investigation, artifact triage, and IR evidence preservation.
+description: "Use when investigating authorized memory, disk/E01, PCAP, endpoint, or incident-response artifacts; preserve originals read-only, record hashes, time zone, collection source, and chain of custody, then build a reproducible timeline and distinguish observed facts from inferred activity; provide scoped IOC/evidence handoff to threat-hunting, threat-intelligence, or malware-analysis."
 ---
 
 # Digital Forensics & IR Artifacts

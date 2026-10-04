@@ -1,6 +1,6 @@
 ---
 name: case-review
-description: Reviews a reverse-skill case package for scope readiness, Evidence to Finding to Path traceability, work item coverage, timeline references, and optional artifact hash integrity before report handoff.
+description: "Use when performing a read-only readiness review of a reverse-skill case package before handoff; check scope, timeline, work-item coverage, artifact references, and Evidence-to-Finding-to-Path traceability, identify missing or unreproducible evidence, and optionally verify case-local SHA-256 hashes; produce the requested Markdown/JSON review without acting on targets, then require strict rerun of the package checks after changes."
 ---
 
 # Evidence Graph Review

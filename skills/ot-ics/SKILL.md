@@ -1,6 +1,6 @@
 ---
 name: ot-ics
-description: Use for authorized OT/ICS security assessment covering Purdue model zoning, PLC/SCADA exposure, industrial protocol discovery, and safe passive-first evaluation.
+description: "Use when assessing authorized OT/ICS environments across Purdue zones, PLC/RTU, SCADA, HMI, industrial protocols, and IT/OT boundaries; begin with passive, read-only discovery and document site scope and process impact, prohibit PLC writes, high-rate probing, or SIS interaction without explicit authorization, and route device firmware, hardware interfaces, or multi-stage paths to firmware-pentest, hardware-security, or attack-chain."
 ---
 
 # OT / ICS Security

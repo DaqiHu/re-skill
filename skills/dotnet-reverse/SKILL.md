@@ -1,6 +1,6 @@
 ---
 name: dotnet-reverse
-description: .NET / C# 二进制逆向。当目标是 .NET assembly（PE 头含 CLR、.exe/.dll 托管程序）、C# 编译产物（含 NativeAOT）、红队 Sharp* 工具（Rubeus / SharpHound / SharpHound 等）、.NET 混淆程序（ConfuserEx / SmartAssembly / Babel / Eazfuscator）、.NET loader / info-stealer / 套壳 malware 时使用。优先用 dnSpyEx + de4dot，需要 AI 直接操作时联动 dnSpy MCP。不用于纯 native 二进制（走 reverse-engineering / ida-reverse）。
+description: "Use when the target is a managed .NET/C# assembly or loader, including obfuscated code and Sharp* tools; identify CLR metadata and distinguish ordinary managed code from NativeAOT or native binaries, inspect C#/IL with dnSpyEx and de4dot, and use the documented dnSpy MCP only when direct AI interaction is needed; preserve originals, verify any requested IL patch, respect tool licensing, and route native analysis to reverse-engineering or IDA."
 license: MIT
 compatibility: Requires a filesystem-based code agent or CLI with shell access, Windows host preferred (dnSpyEx 是 Windows GUI)；Linux/macOS 可用 ILSpy/de4dot CLI + mono/dotnet runtime。
 allowed-tools: Bash Read Write Edit Glob Grep Task WebFetch WebSearch

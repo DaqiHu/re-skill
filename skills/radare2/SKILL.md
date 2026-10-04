@@ -1,7 +1,6 @@
 ---
 name: radare2
-description: |
-  Use this skill whenever the user wants to analyze binaries with radare2/r2 from the command line, including reverse engineering, disassembly, function analysis, strings/import inspection, patching, binary diffing, hex inspection, or r2 scripting. Also use it when the user mentions PE/ELF/Mach-O/DEX/WASM files together with CLI analysis, `rabin2`, `rasm2`, `radiff2`, `r2pipe`, or asks for radare2 command help on Windows/Linux/macOS.
+description: "Use when the user requests authorized CLI binary analysis with radare2/r2, rabin2, rasm2, radiff2, or r2pipe on Windows, Linux, or macOS; perform format, string, import/export, function, xref, disassembly, diff, hex, and script work, requiring evidence checks for imports/exports and treating failed IAT recovery as a dynamic-analysis branch; write patches only when requested, preserve originals, and route IDA-specific workflows to ida-reverse."
 ---
 
 # radare2

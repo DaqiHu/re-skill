@@ -1,6 +1,6 @@
 ---
 name: competition-stego-media
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for image, audio, video, document, and container steganography. Use when the user asks to inspect metadata, alpha or palette channels, LSBs, thumbnails, appended trailers, QR fragments, transcoding artifacts, or recover a hidden payload from media without blind brute force. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to inspect metadata, alpha or palette channels, LSBs, thumbnails, appended trailers, QR fragments, transcoding artifacts, or recover a hidden payload from media without blind brute force. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for image, audio, video, document, and container steganography. Covers spectrogram features, RGB/YUV planes, document object streams, video frame deltas, and the distinction between recovering a carrier payload and interpreting or cryptanalysing it afterward. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Stego Media
@@ -37,7 +37,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 - Keep the chain in order: container -> channel or carrier -> extraction -> decompression or decode -> final parse.
 - Separate extraction success from final interpretation; a channel hit is not the same as artifact recovery.
-- If the problem becomes primarily about cryptography after extraction, hand off to the broader crypto skill.
+- If the problem becomes primarily about cryptography after extraction, route to `$competition-crypto-mobile`.
 
 ## Read This Reference
 

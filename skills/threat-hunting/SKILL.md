@@ -1,6 +1,6 @@
 ---
 name: threat-hunting
-description: Use for blue-team threat hunting, detection engineering with Sigma/YARA, SIEM query design, and incident detection validation.
+description: "Use when performing hypothesis-driven blue-team hunts or validating detections in SIEM/EDR history; define data sources and time bounds, correlate events, write and test Sigma/YARA or SIEM queries, track false positives, and use Atomic Red Team only in a lab or through supplied log replay; preserve query and evidence provenance, and route artifact timelines or sample behavior to digital-forensics or malware-analysis."
 ---
 
 # Threat Hunting & Detection Engineering

@@ -1,6 +1,6 @@
 ---
 name: protocol-reverse
-description: Use for authorized reverse engineering of custom binary protocols, Protobuf/gRPC, WebSocket frames, and PCAP-driven protocol recovery.
+description: "Use when recovering an authorized custom TCP/UDP or application protocol from PCAP, logs, binaries, or a supplied service; handle Protobuf/gRPC, FlatBuffers, MessagePack, WebSocket, MQTT, and RPC framing, lengths, compression, encryption, checksums, sequencing, and state; produce a message dictionary, decoder, and redacted sample evidence, keeping replay within scope and routing browser-only behavior or native implementation analysis to the relevant specialist."
 ---
 
 # Protocol Reverse Engineering

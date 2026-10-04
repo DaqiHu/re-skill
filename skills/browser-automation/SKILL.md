@@ -1,10 +1,6 @@
 ---
 name: browser-automation
-description: |
-  统一自动化入口。覆盖浏览器自动化（Playwright）和 Windows 桌面应用自动化（OpenReverse）。
-  浏览器场景：打开网页、点击、填表、爬取、截图、自动化登录、渗透页面交互。
-  桌面场景：操作 IDA/x64dbg 等 GUI 工具、Windows UI Automation、视觉驱动交互、桌面应用网络抓包。
-  触发关键词：浏览器自动化、桌面自动化、打开网页、填表、爬取、截图、自动化登录、Playwright、agent-browser、headless、OpenReverse、UIA、CUA、桌面操作、Windows 自动化。
+description: "Use when automating an authorized browser or Windows desktop workflow; choose Playwright/agent-browser for browser DOM and page interaction, and OpenReverse UIA/CUA for desktop applications, IDA/x64dbg GUIs, visual surfaces, or desktop traffic capture; select the documented Proxy or Local lane, verify page/session state and captured evidence, close task-owned sessions, and route JavaScript hook or signature recovery to js-reverse."
 ---
 
 # 自动化操作 (Desktop & Browser Automation)

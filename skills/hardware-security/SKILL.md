@@ -1,6 +1,6 @@
 ---
 name: hardware-security
-description: Use for authorized hardware and embedded interface security research including UART/JTAG discovery, debug pad triage, secure boot overview, and offline firmware extraction support.
+description: "Use when conducting authorized physical-hardware security research involving UART, JTAG/SWD, SPI, debug pads, secure boot, or offline firmware extraction; confirm ownership and written scope, use read-only probing by default, document pinout and voltage evidence, observe ESD/power safety, hash extracted data, and route firmware-image analysis or industrial-control systems to firmware-pentest or ot-ics."
 ---
 
 # Hardware / Embedded Interface Security

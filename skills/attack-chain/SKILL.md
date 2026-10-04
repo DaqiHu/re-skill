@@ -1,6 +1,6 @@
 ---
 name: attack-chain
-description: Use for authorized multi-stage attack-path planning and orchestration when a task spans reconnaissance, initial access, privilege escalation, lateral movement, or impact assessment. Route single-stage tasks directly to their specialist skill.
+description: "Use when an authorized assessment spans multiple stages, from reconnaissance and initial access through privilege escalation, lateral movement, persistence, defense evasion, and impact; coordinate the relevant web/API, mobile, firmware, browser, binary, identity, cloud, and Windows/AD specialists through scoped roles, timeline, and work items, maintaining Evidence-to-Finding-to-Path traceability; route a single-stage task directly to its specialist."
 ---
 # Attack Chain Orchestration Skill
 

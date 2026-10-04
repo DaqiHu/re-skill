@@ -1,6 +1,6 @@
 ---
 name: macos-reverse
-description: Use for authorized macOS and Mach-O reverse engineering including codesign, Objective-C/Swift recovery, endpoint security surfaces, and Apple platform malware analysis.
+description: "Use when reversing authorized macOS apps, Mach-O files, dylibs, frameworks, or Apple-platform malware; inspect codesign/notarization and Hardened Runtime, recover Objective-C/Swift behavior, and assess LaunchAgents/Daemons, XPC, TCC, and endpoint-security surfaces with LLDB/Frida as scoped; record symbol/address and runtime evidence, preserve originals, and route iOS or general malware cases to mobile-reverse or malware-analysis."
 ---
 
 # macOS / Mach-O Reverse Engineering

@@ -1,6 +1,6 @@
 ---
 name: competition-linux-credential-pivot
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for Linux credential artifacts, service tokens, SSH material, cloud and container secrets, socket-level trust, and host-to-host pivot chains. Use when the user asks to trace Linux auth artifacts, accepted token or key replay, socket or service-account trust edges, sudo or capability abuse, or explain lateral movement across Linux challenge nodes. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to trace Linux auth artifacts, accepted token or key replay, socket or service-account trust edges, sudo or capability abuse, or explain lateral movement across Linux challenge nodes. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for Linux credential artifacts, service tokens, SSH material, cloud and container secrets, socket-level trust, and host-to-host pivot chains. Also distinguishes credential replay and socket/service trust from the separate container-to-host kernel escape path, including namespace crossover and stable capability-gain proof. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Linux Credential Pivot
@@ -37,7 +37,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 - Compress to: recovered artifact -> accepted replay path -> pivot host or privilege transition -> resulting capability.
 - State whether root cause is weak key handling, token leakage, socket trust, sudo or capability abuse, or namespace crossover.
-- If the chain pivots into kernel exploit boundaries, hand off to kernel container escape skill.
+- If the chain pivots into kernel exploit boundaries, route to `$competition-kernel-container-escape`.
 
 ## Read This Reference
 

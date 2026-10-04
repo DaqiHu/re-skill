@@ -1,6 +1,6 @@
 ---
 name: windows-ad
-description: Use for authorized Active Directory and Windows identity attacks including Kerberos, AD CS, BloodHound paths, NTLM relay, and domain privilege escalation research.
+description: "Use when assessing an authorized Windows domain or Active Directory identity path; review Kerberoasting/AS-REP, delegation and ACLs, AD CS ESC paths, BloodHound relationships, NTLM relay, credentials, and lateral privilege escalation; state domain/DC/network and account scope, preserve evidence and high-risk approvals, prohibit production DCSync or golden-ticket actions absent explicit authorization, and route multi-stage plans to attack-chain."
 ---
 
 # Windows / Active Directory Security

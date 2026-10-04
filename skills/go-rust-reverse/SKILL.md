@@ -1,6 +1,6 @@
 ---
 name: go-rust-reverse
-description: Use for reverse engineering stripped Go and Rust binaries including runtime recognition, pclntab/moduel data recovery, panic strings, and idiomatic decompilation recovery.
+description: "Use when reversing stripped Go or Rust binaries; identify runtime and version clues, recover Go build IDs and pclntab/module data with GoReSym where appropriate, and use Rust panic strings, crate metadata, async patterns, and cross-checks to restore idiomatic structure; label static versus runtime evidence and route broader native, malware, or exploit work to the corresponding specialist."
 ---
 
 # Go / Rust Binary Reverse Engineering

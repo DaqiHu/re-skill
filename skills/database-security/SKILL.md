@@ -1,6 +1,6 @@
 ---
 name: database-security
-description: Use for authorized database security assessment covering PostgreSQL/MySQL/MSSQL/Mongo/Redis exposure, authz, UDF/command paths, and misconfiguration review.
+description: "Use when assessing authorized PostgreSQL, MySQL, MSSQL, MongoDB, or Redis deployments; review exposure, authentication, roles/grants, TLS and audit settings, NoSQL injection, UDFs, and command-execution paths; name the database and environment scope, avoid destructive production queries, distinguish configuration findings from verified exploitation, preserve evidence, and route cloud identity or multi-stage paths to cloud-k8s or attack-chain."
 ---
 
 # Database Security Assessment

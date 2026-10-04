@@ -1,6 +1,6 @@
 ---
 name: supply-chain-security
-description: Use for software supply-chain security assessment covering SBOM, SCA, CI/CD pipelines, container images, build integrity, dependency provenance, and vulnerability reachability.
+description: "Use when assessing software supply-chain risk across SBOM/SCA, dependencies, CI/CD pipelines and runners, actions, containers, IaC, build integrity, provenance, signing/attestation, licensing, or vulnerability reachability; bind findings to actual versions and execution paths, isolate PoCs, preserve evidence, and route defects in reachable application logic to code-audit."
 ---
 # Supply Chain Security Testing
 

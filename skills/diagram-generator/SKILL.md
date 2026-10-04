@@ -1,6 +1,6 @@
 ---
 name: diagram-generator
-description: generate, refine, validate, and render diagrams from natural language, notes, code snippets, schemas, tables, or existing diagram source. use for flowcharts, swimlanes, sequence diagrams, state diagrams, er diagrams, class diagrams, architecture/c4-style diagrams, dependency graphs, gantt charts, mind maps, user journeys, sankey-style flows, org charts, network graphs, and other visual models. supports mermaid by default, graphviz dot for complex graph layout, plantuml for uml-heavy engineering diagrams, and svg output when direct markup is more reliable.
+description: "Use when creating or refining an editable diagram from a prompt, notes, code, schemas, tables, or existing diagram source; cover flowcharts, swimlanes, sequences, states, ER/class/architecture/C4 views, dependency graphs, timelines, and other visual models; default to Mermaid, use Graphviz for dense graph layout, PlantUML for UML-heavy work, or SVG when direct markup fits, state assumptions, validate syntax, and render when requested or useful."
 ---
 
 # Diagram Generator

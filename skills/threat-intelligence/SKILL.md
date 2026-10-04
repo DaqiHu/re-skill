@@ -1,6 +1,6 @@
 ---
 name: threat-intelligence
-description: Use for authorized OSINT and cyber threat intelligence that enriches IOCs, campaigns, impersonation, scams, or threat actors from public sources. Includes bounded X/Twitter search through Xquik, source preservation, corroboration, and evidence handoff.
+description: "Use when conducting authorized OSINT and cyber threat intelligence from public sources to enrich IOCs, campaigns, impersonation, scams, or threat-actor assessments; use bounded X/Twitter searches through Xquik, preserve source records, corroborate findings, and provide an evidence handoff."
 ---
 
 # Threat Intelligence & Public-Source OSINT

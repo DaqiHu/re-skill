@@ -1,6 +1,6 @@
 ---
 name: binary-ninja-reverse
-description: Use for authorized binary analysis in Binary Ninja, including HLIL/MLIL/LLIL inspection, strings/imports/exports, cross-references, types, patch review, Python API automation, and optional Binary Ninja MCP or localhost HTTP integration.
+description: "Use when the user selects Binary Ninja or needs its IL/cross-check for authorized binary analysis; inspect imports, exports, strings, references, callers, types, and HLIL/MLIL/LLIL, automate through its Python API or explicitly requested localhost MCP/HTTP integration, and document any requested patch; keep scope and license boundaries, preserve originals, and verify changes before handing off to another static or dynamic-analysis specialist."
 ---
 
 # Binary Ninja reverse engineering

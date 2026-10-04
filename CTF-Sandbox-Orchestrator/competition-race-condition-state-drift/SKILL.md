@@ -1,6 +1,6 @@
 ---
 name: competition-race-condition-state-drift
-description: Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for race windows, ordering bugs, idempotency failures, lock gaps, concurrent worker drift, and state inconsistencies that produce decisive effects. Use when the user asks to reproduce timing-sensitive bugs, concurrent state corruption, duplicate actions, stale reads, or privilege or balance drift caused by request ordering. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.
+description: "Use when the user asks to reproduce timing-sensitive bugs, concurrent state corruption, duplicate actions, stale reads, or privilege or balance drift caused by request ordering. Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for race windows, ordering bugs, idempotency failures, lock gaps, concurrent worker drift, and state inconsistencies that produce decisive effects. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here."
 ---
 
 # Competition Race Condition State Drift
@@ -37,7 +37,7 @@ Reply in Simplified Chinese unless the user explicitly requests English.
 
 - Compress to: request A and B ordering -> stale check or lock gap -> conflicting writes -> resulting capability or artifact.
 - State whether root cause is missing lock, weak idempotency, stale cache read, delayed async commit, or retry side effect.
-- If the path becomes queue-dominant, hand off to queue worker drift skill.
+- If the path becomes queue-dominant, route to `$competition-queue-worker-drift`.
 
 ## Read This Reference
 

@@ -1,6 +1,6 @@
 ---
 name: radio-sdr
-description: Use for authorized RF/SDR security research including signal identification, replay feasibility study in shielded labs, and wireless protocol analysis outside classic Wi-Fi.
+description: "Use when conducting authorized non-Wi-Fi RF/SDR research such as signal identification, modulation/protocol analysis, and replay-feasibility study; use receive-only or shielded-lab methods and document frequency, antenna, and test setup, prohibiting unauthorized transmission, interference, or out-of-scope replay; route Wi-Fi assessment to wifi-wireless and industrial radio to ot-ics."
 ---
 
 # RF / SDR Security Research

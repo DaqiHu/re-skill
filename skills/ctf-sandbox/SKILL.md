@@ -1,6 +1,6 @@
 ---
 name: ctf-sandbox
-description: Thin PRIMARY for CTF / AWD / 靶场 multi-type orchestration. Hands off to the sidecar CTF-Sandbox-Orchestrator. Use when the user says CTF, AWD, 靶场, or 比赛题 and no more specific pwn/APK/IDA route already won.
+description: "Use when the user requests a CTF, AWD, practice range, or competition challenge and no specific pwn, APK, or IDA specialist takes precedence; classify the authorized challenge family, isolate work to the lab or supplied artifacts, and route multi-type orchestration to CTF-Sandbox-Orchestrator; follow its applicable licensing and scope constraints, use the reverse-skill Evidence-to-Finding-to-Path handoff, and verify the requested downstream result."
 ---
 
 # CTF sandbox entry (sidecar, not a second router)

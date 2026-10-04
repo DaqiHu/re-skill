@@ -1,6 +1,6 @@
 ---
 name: browser-extension-reverse
-description: Use for authorized reverse engineering of browser extensions (Chrome/Firefox) including manifest analysis, background workers, and extension-based credential or traffic logic recovery.
+description: "Use when analyzing an authorized Chrome/Edge, Firefox, or other browser extension package (CRX/XPI); inspect manifest/version and permissions, background/service workers, content scripts, storage, messaging, network flows, credential handling, update/signing, and supply-chain risks; use DevTools/CDP or Frida only within scope, preserve package evidence, and route ordinary page JavaScript to js-reverse."
 ---
 
 # Browser Extension Reverse Engineering
